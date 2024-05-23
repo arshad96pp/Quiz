@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <section class="section-area">
+      <div class="main__container">
+        <div class="top-section">
+          <div class="arrow-section">
+            <span
+              ><i
+                class="fa-solid fa-arrow-left"
+                style="cursor: pointer; font-size: 13px"
+                onclick="goBackhandlere()"
+              ></i
+            ></span>
+          </div>
+          <div class="image-section">
+            <h1>Practice Questions</h1>
+            <img src="./assets/main.png" alt="" />
+          </div>
+          <div class="card-section-area">
+            <div class="small-cards">
+              <p>10</p>
+              <p>Questions</p>
+            </div>
+            <div class="small-cards">
+              <p>120</p>
+              <p>Mark</p>
+            </div>
+            <div class="small-cards">
+              <p>10 min</p>
+              <p>Duration</p>
+            </div>
+          </div>
+        </div>
+        <div class="bottom-section">
+          <div id="quiz_description">
+            <div class="quiz-description-header">
+              <h5><b>Instructions</b></h5>
+            </div>
+
+            <ul>
+              <li>
+                The examination is of 75 minutes duration. There are a total of
+                100 questions carrying 100 marks.
+              </li>
+              <li>
+                Each MCQ type question has four choices out of which only one
+                choice is the correct answer.
+              </li>
+              <li>
+                Each correct answer carries 1 mark and for each wrong answer 1/3
+                mark will be deducted. No negative mark for unattended
+                questions.
+              </li>
+              <li>
+                You are only allowed to take the exam once; once you have taken
+                it, you are not permitted to take it again for whatever reason.
+              </li>
+              <li>
+                After the test, Your performance will be reviewed, a thorough
+                evaluation report will be provided, and the questions and their
+                detailed solution will also be provided
+              </li>
+              <li>
+                The answer keys are challengeable and we will update in the
+                telegram group if there are any changes.
+              </li>
+            </ul>
+
+            <div class="quiz-desciption-btn">
+              <button id="startTestButton">Start Test</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- next section -->
+
+      <div class="quiz_ui_attend_section hidden">
+        <div class="quiz_attend_top_section">
+          <div class="quiz_attend-arrow">
+            <span
+              ><i
+                class="fa-solid fa-arrow-left"
+                onclick="goBackFun()"
+              ></i></span
+            ><span>1/10</span>
+          </div>
+          <div class="quiz-attend_time">
+            <div id="timer" class="timing_counter">1:00</div>
+          </div>
+
+          <div class="quiz_attent_number_cercle">
+            <div class="cercle_wrapper" id="cercle_wrapper">
+              <!-- data -->
+            </div>
+          </div>
+        </div>
+        <div class="quiz_attend_bottom_section">
+          <h1>1.</h1>
+          <p>Which of the following elements is a noble gas?</p>
+
+          <div class="option_card_wraper">
+            <div class="option_card">
+              <div class="single_option">
+                <label
+                  for=""
+                  id=""
+                  class="option_label"
+                  style="
+                    cursor: pointer;
+                    display: block;
+                    padding: 10px;
+                    border-radius: 5px;
+                    width: 100%;
+                  "
+                >
+                  <h1 class="option_title">**OPTION_CONTENT**</h1>
+                </label>
+              </div>
+            </div>
+
+            <div class="option_card">
+              <div class="single_option">
+                <label
+                  for=""
+                  id=""
+                  class="option_label"
+                  style="
+                    cursor: pointer;
+                    display: block;
+                    padding: 10px;
+                    border-radius: 5px;
+                    width: 100%;
+                  "
+                >
+                  <h1 class="option_title">**OPTION_CONTENT**</h1>
+                </label>
+              </div>
+            </div>
+
+            <div class="option_card">
+              <div class="single_option">
+                <label
+                  for=""
+                  id=""
+                  class="option_label"
+                  style="
+                    cursor: pointer;
+                    display: block;
+                    padding: 10px;
+                    border-radius: 5px;
+                    width: 100%;
+                  "
+                >
+                  <h1 class="option_title">**OPTION_CONTENT**</h1>
+                </label>
+              </div>
+            </div>
+            <div class="option_card">
+              <div class="single_option">
+                <label
+                  for=""
+                  id=""
+                  class="option_label"
+                  style="
+                    cursor: pointer;
+                    display: block;
+                    padding: 10px;
+                    border-radius: 5px;
+                    width: 100%;
+                  "
+                >
+                  <h1 class="option_title">**OPTION_CONTENT**</h1>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="selected_option">
+            <span>A</span>
+            <span>B</span>
+            <span>C</span>
+            <span>D</span>
+          </div>
+
+          <div class="next-btn-section">
+            <button id="previousBtn" class="priv opacity_on">
+              <img src="./assets/Vector (4).png" alt="" />
+            </button>
+            <button id="nextBtn">
+              <img src="./assets/Vector (4).png" alt="" />
+            </button>
+            <!-- id="nextBtn" -->
+          </div>
+
+          <!-- Popup HTML -->
+          <div id="popup" class="popup hidden">
+            <div class="popup_top_section">
+              <p>Are you sure you want to submit ?</p>
+            </div>
+            <div class="popup_bottom_section">
+              <div class="attemted_wraper">
+                <div class="attemted_left">
+                  <div class="attemted_cercle">
+                    <img src="./assets/Vector (5).png" alt="" />
+                  </div>
+                  <h3>3</h3>
+                  <p>Attempted</p>
+                </div>
+                <div class="attemted_right">
+                  <div class="not_attemted_cercle">
+                    <img src="./assets/_.png" alt="" />
+                  </div>
+                  <h3>3</h3>
+                  <p>Unattempted</p>
+                </div>
+              </div>
+
+              <div class="attemted_count_popup">
+                <!-- data -->
+              </div>
+
+              <div class="popup_submit">
+                <div class="left-btn">
+                  <button id="closePopupBtn">Cancel</button>
+                </div>
+                <div class="right-btn">
+                  <button>Submit</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- next section -->
+
+      <div class="submit__ui hidden">
+        <div class="submit-item-box">
+          <div class="center-item">
+            <div class="success_message_actions">
+              <img src="./assets/success.png" alt="" />
+            </div>
+            <h1>Successfully Submitted</h1>
+            <div class="success_btn">
+              <button>View Result</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="timeout_ui" class="time_out_ui hidden">
+        <div class="time_out_section">
+          <h1>Time is up!</h1>
+
+          <div class="time_out_btn">
+            <button onclick="navigatBack()" id="goBack">Go Back</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <script src="./index.js"></script> -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const mainContainer = document.querySelector(".main__container");
+        const quizAttendSection = document.querySelector(
+          ".quiz_ui_attend_section"
+        );
+        const startTestButton = document.getElementById("startTestButton");
+        const nextButton = document.getElementById("nextBtn");
+        const previousBtn = document.getElementById("previousBtn");
+        const popup = document.getElementById("popup");
+        const closePopupBtn = document.getElementById("closePopupBtn");
+        const submitButton = document.querySelector(
+          ".popup_submit .right-btn button"
+        );
+        const submitUI = document.querySelector(".submit__ui");
+        const timeoutUI = document.getElementById("timeout_ui");
+        const timerElement = document.getElementById("timer");
+
+        const questions = [
+          {
+            id: 1,
+            question: "Which of the following elements is a noble gas?",
+            options: [
+              { id: "1A", text: "A. Helium" },
+              { id: "1B", text: "B. Oxygen" },
+              { id: "1C", text: "C. Nitrogen" },
+              { id: "1D", text: "D. Hydrogen" },
+            ],
+          },
+          {
+            id: 2,
+            question: "What is the capital of France?",
+            options: [
+              { id: "2A", text: "A. Berlin" },
+              { id: "2B", text: "B. London" },
+              { id: "2C", text: "C. Paris" },
+              { id: "2D", text: "D. Madrid" },
+            ],
+          },
+          {
+            id: 3,
+            question: "What is the chemical symbol for water?",
+            options: [
+              { id: "3A", text: "A. CO2" },
+              { id: "3B", text: "B. H2O" },
+              { id: "3C", text: "C. O2" },
+              { id: "3D", text: "D. NaCl" },
+            ],
+          },
+          {
+            id: 4,
+            question: 'Who wrote "To Kill a Mockingbird"?',
+            options: [
+              { id: "4A", text: "A. Harper Lee" },
+              { id: "4B", text: "B. Mark Twain" },
+              { id: "4C", text: "C. J.K. Rowling" },
+              { id: "4D", text: "D. Ernest Hemingway" },
+            ],
+          },
+          {
+            id: 5,
+            question: "What is the largest planet in our solar system?",
+            options: [
+              { id: "5A", text: "A. Earth" },
+              { id: "5B", text: "B. Jupiter" },
+              { id: "5C", text: "C. Mars" },
+              { id: "5D", text: "D. Saturn" },
+            ],
+          },
+          {
+            id: 6,
+            question: "What is the boiling point of water?",
+            options: [
+              { id: "6A", text: "A. 0°C" },
+              { id: "6B", text: "B. 50°C" },
+              { id: "6C", text: "C. 100°C" },
+              { id: "6D", text: "D. 200°C" },
+            ],
+          },
+          {
+            id: 7,
+            question: "Who painted the Mona Lisa?",
+            options: [
+              { id: "7A", text: "A. Vincent van Gogh" },
+              { id: "7B", text: "B. Pablo Picasso" },
+              { id: "7C", text: "C. Leonardo da Vinci" },
+              { id: "7D", text: "D. Claude Monet" },
+            ],
+          },
+          {
+            id: 8,
+            question: "What is the powerhouse of the cell?",
+            options: [
+              { id: "8A", text: "A. Nucleus" },
+              { id: "8B", text: "B. Mitochondria" },
+              { id: "8C", text: "C. Ribosome" },
+              { id: "8D", text: "D. Endoplasmic Reticulum" },
+            ],
+          },
+          {
+            id: 9,
+            question: "Which planet is known as the Red Planet?",
+            options: [
+              { id: "9A", text: "A. Venus" },
+              { id: "9B", text: "B. Mars" },
+              { id: "9C", text: "C. Jupiter" },
+              { id: "9D", text: "D. Saturn" },
+            ],
+          },
+          {
+            id: 10,
+            question: "What is the speed of light?",
+            options: [
+              { id: "10A", text: "A. 300,000 km/s" },
+              { id: "10B", text: "B. 150,000 km/s" },
+              { id: "10C", text: "C. 100,000 km/s" },
+              { id: "10D", text: "D. 50,000 km/s" },
+            ],
+          },
+        ];
+
+        // start here
+        let currentQuestion = 0;
+        const totalQuestions = questions.length;
+
+        const selectedOptions = Array(totalQuestions).fill(null);
+        const answeredQuestions = [];
+
+        let timer;
+        let timeLimit = 900;
+        // Function to update the timer display
+        function updateTimer() {
+          const minutes = Math.floor(timeLimit / 60);
+          let seconds = timeLimit % 60;
+          seconds = seconds < 10 ? "0" + seconds : seconds;
+          timerElement.textContent = `${minutes}:${seconds}`;
+        }
+
+        // Function to start the timer
+        function startTimer() {
+          updateTimer(); // Update the timer initially
+
+          // Update the timer every second
+          timer = setInterval(() => {
+            timeLimit--;
+            updateTimer();
+
+            // Check if the time is up
+            if (timeLimit <= 0) {
+              clearInterval(timer);
+              timerElement.textContent = "00:00"; // Display 00:00 when time is up
+              showTimeoutUI();
+            }
+          }, 1000);
+        }
+
+        // Function to show the timeout UI
+        function showTimeoutUI() {
+          quizAttendSection.classList.add("hidden");
+          timeoutUI.classList.remove("hidden");
+        }
+
+        startTestButton.addEventListener("click", () => {
+          mainContainer.classList.add("hidden");
+          quizAttendSection.classList.remove("hidden");
+          updateQuestionUI(); // Update the UI with the first question
+          startTimer();
+        });
+
+        previousBtn.addEventListener("click", () => {
+          if (currentQuestion > 0) {
+            currentQuestion--;
+            updateQuestionUI();
+          } else {
+            previousBtn.classList.add("opacity_on");
+          }
+        });
+
+        nextButton.addEventListener("click", () => {
+          const selectedOption = selectedOptions[currentQuestion];
+          const qId = questions[currentQuestion]?.id;
+          const aId = questions[currentQuestion]?.options[selectedOption]?.id;
+
+          answer_question(qId, aId);
+
+          if (
+            !answeredQuestions.some(
+              (answer) => answer.qId === qId && answer.aId === aId
+            )
+          ) {
+            answeredQuestions.push({ qId, aId });
+          }
+
+          // add logic privies button show
+          if (currentQuestion >= 0) {
+            previousBtn.classList.remove("opacity_on");
+          } else {
+            previousBtn.classList.add("opacity_on");
+          }
+
+          if (currentQuestion < totalQuestions - 1) {
+            currentQuestion++;
+
+            updateQuestionUI();
+          } else {
+            showPopup();
+            const attemptedCountPopup = document.querySelector(
+              ".attemted_count_popup"
+            );
+            const circleItems = attemptedCountPopup.querySelectorAll("span");
+
+            const attemptedLeft = document.querySelector(".attemted_left h3");
+            const unattemptedRight =
+              document.querySelector(".attemted_right h3");
+
+            function countAnsweredQuestions() {
+              return answeredQuestions.filter(
+                (answer) => answer.aId !== undefined
+              ).length;
+            }
+
+            // Function to count the number of unanswered questions
+            function countUnansweredQuestions() {
+              return totalQuestions - countAnsweredQuestions();
+            }
+
+            const answeredCount = countAnsweredQuestions();
+            const unansweredCount = countUnansweredQuestions();
+
+            attemptedLeft.textContent = answeredCount;
+            unattemptedRight.textContent = unansweredCount;
+
+            circleItems.forEach((item, index) => {
+              if (selectedOptions[index] !== null) {
+                const qId = questions[index]?.id; // Get the question ID
+                const aId =
+                  questions[index]?.options[selectedOptions[index]]?.id; // Get the answer ID
+
+                const isAnswered = answeredQuestions.some(
+                  (answer) => answer.qId === qId && answer.aId === aId
+                );
+
+                if (isAnswered) {
+                  item.classList.add("attendedClass"); // Add 'attendedClass' class if the question is answered
+                  item.classList.remove("unAttended"); // Remove 'unAttended' class
+                } else {
+                  item.classList.remove("attendedClass"); // Remove 'attendedClass' class
+                  item.classList.add("unAttended"); // Add 'unAttended' class if the question is not answered
+                }
+              } else {
+                item.classList.remove("attendedClass"); // Remove 'attendedClass' class
+                item.classList.add("unAttended"); // Add 'unAttended' class if there is no selected answer
+              }
+            });
+          }
+        });
+
+        function updateAttemptedCountPopup() {
+          const attemptedCountPopup = document.querySelector(
+            ".attemted_count_popup"
+          );
+          attemptedCountPopup.innerHTML = ""; // Clear the existing content
+
+          // Loop through the number of questions and create span elements
+          for (let i = 0; i < totalQuestions; i++) {
+            const span = document.createElement("span");
+            span.textContent = i + 1; // Set the text content to the question number
+            span.addEventListener("click", () => {
+              hidePopup(); // Close the popup
+              navigateToQuestion(i + 1); // Navigate to the corresponding question
+            });
+            attemptedCountPopup.appendChild(span); // Append the span to the attemptedCountPopup
+          }
+        }
+
+        // Call the function to initialize the attempted count popup UI
+        updateAttemptedCountPopup();
+
+        closePopupBtn.addEventListener("click", () => {
+          hidePopup();
+        });
+
+        submitButton.addEventListener("click", () => {
+          alert("Quiz submitted! ");
+          console.log("Answered Questions:", answeredQuestions);
+
+          hidePopup();
+          showSubmitUI();
+        });
+
+        document.querySelectorAll(".option_card").forEach((card, index) => {
+          card.addEventListener("click", function () {
+            document
+              .querySelectorAll(".option_card")
+              .forEach((c) => c.classList.remove("active-item"));
+            this.classList.add("active-item");
+
+            // Save the selected option index
+            selectedOptions[currentQuestion] = index;
+
+            // Add active-item class to the corresponding selected option
+            document
+              .querySelectorAll(".selected_option span")
+              .forEach((span) => span.classList.remove("active-item"));
+            document
+              .querySelectorAll(".selected_option span")
+              [index].classList.add("active-item");
+          });
+        });
+
+        // Function to navigate to a specific question
+        function navigateToQuestion(questionNumber) {
+          // Find the index of the question with the given number
+          const index = questionNumber - 1; // Adjust for zero-based index
+          if (index >= 0 && index < totalQuestions) {
+            currentQuestion = index;
+            updateQuestionUI(); // Update the UI to show the selected question
+          }
+        }
+
+        // Update cercleWrapper creation to assign the click event to each span
+        function updateCercleWrapper() {
+          const cercleWrapper = document.getElementById("cercle_wrapper");
+          cercleWrapper.innerHTML = ""; // Clear the existing content
+
+          // Loop through the number of questions and create span elements
+          for (let i = 0; i < totalQuestions; i++) {
+            const span = document.createElement("span");
+            span.classList.add("cercle_item");
+            span.textContent = i + 1; // Set the text content to the question number
+            span.dataset.questionNumber = i + 1; // Set the data attribute for question number
+            cercleWrapper.appendChild(span); // Append the span to the cercleWrapper
+
+            // Add event listener to each span
+            span.addEventListener("click", () => {
+              const questionNumber = parseInt(span.dataset.questionNumber);
+              navigateToQuestion(questionNumber);
+            });
+          }
+        }
+        updateCercleWrapper();
+
+        function updateQuestionUI() {
+          const current = questions[currentQuestion];
+          document.querySelector(
+            ".quiz_attend-arrow span:nth-child(2)"
+          ).textContent = `${currentQuestion + 1}/${totalQuestions}`;
+          document.querySelector(
+            ".quiz_attend_bottom_section h1"
+          ).textContent = `${currentQuestion + 1}.`;
+          document.querySelector(".quiz_attend_bottom_section p").textContent =
+            current.question;
+          document
+            .querySelectorAll(".option_card h1")
+            .forEach((optionCard, index) => {
+              optionCard.textContent = current.options[index].text;
+            });
+
+          const circleItems = document.querySelectorAll(".cercle_item");
+          circleItems.forEach((item, index) => {
+            const qId = questions[index]?.id; // Get the question ID
+            const aId = questions[index]?.options[selectedOptions[index]]?.id; // Get the answer ID
+
+            // Check if aId is defined
+            if (aId) {
+              // Filter the answeredQuestions array based on the current question ID and answer ID
+              const answeredQuestion = answeredQuestions.filter(
+                (answer) => answer.qId === qId && answer.aId === aId
+              );
+
+              if (answeredQuestion.length > 0) {
+                item.classList.add("answered"); // Add 'answered' class if the question is answered
+              } else {
+                item.classList.remove("answered"); // Remove 'answered' class if the question is not answered
+              }
+            } else {
+              item.classList.remove("answered"); // Remove 'answered' class if there is no selected answer
+            }
+          });
+
+          // Remove active-item class from all option cards and selected options
+          document
+            .querySelectorAll(".option_card")
+            .forEach((card) => card.classList.remove("active-item"));
+
+          document
+            .querySelectorAll(".selected_option span")
+            .forEach((span) => span.classList.remove("active-item"));
+
+          // Add active-item class to the selected option if any
+          if (selectedOptions[currentQuestion] !== null) {
+            document
+              .querySelectorAll(".option_card")
+              [selectedOptions[currentQuestion]].classList.add("active-item");
+            document
+              .querySelectorAll(".selected_option span")
+              [selectedOptions[currentQuestion]].classList.add("active-item");
+          }
+        }
+
+        // popup section logic
+
+        function showPopup() {
+          popup.classList.remove("hidden");
+          setTimeout(() => {
+            popup.classList.add("visible");
+          }, 10); // Slight delay to ensure the transition works
+        }
+
+        function hidePopup() {
+          popup.classList.remove("visible");
+          setTimeout(() => {
+            popup.classList.add("hidden");
+          }, 300); // Match this delay with the transition duration
+        }
+
+        function showSubmitUI() {
+          quizAttendSection.classList.add("hidden");
+          submitUI.classList.remove("hidden");
+        }
+      });
+
+      function answer_question(qId, aId) {
+        // console.log("Question ID:", qId);
+        // console.log("Answer ID:", aId);
+      }
+
+      function navigatBack() {
+        window.location.href = "index.html";
+      }
+
+      function viewResult() {
+        window.location.href = "QuestianNumber.html";
+      }
+
+      function goBackhandlere() {
+        window.location.href = "QuestianNumber.html";
+      }
+      function goBackFun() {
+        window.location.href = "index.html";
+      }
+    </script>
+  </body>
+</html>
